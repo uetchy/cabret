@@ -1,0 +1,20 @@
+{
+  "name": "cabret",
+  "version": "1.0.0",
+  "description": "Cabret for Hugo",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Yasuaki Uechi <uetchy@randompaper.co>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.30.0"
+  },
+  "dependencies": {
+    "babel": "^5.8.3",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
+  }
+}

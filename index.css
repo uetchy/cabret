@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Acrom", sans-serif;
+  background: #3F3535;
+}
+
+.navigation-bar {
+  background: #3F3535;
+  text-align: center;
+  padding: 15px;
+  cursor: default;
+  -webkit-user-select: none;
+}
+
+.navigation-bar--title {
+  font-weight: 100;
+  color: #fff;
+}
+
+.navigation-bar--description {
+  color: #898787;
+}
+
+.article-cell {
+  padding: 15px;
+  cursor: default;
+  -webkit-user-select: none;
+  background: #fff;
+}
+
+.article-cell--description {
+  color: #B0B0B0;
+}
