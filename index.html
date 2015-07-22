@@ -6,7 +6,9 @@
 <body>
   <app></app>
   <script>
-    require("babel/register")
+    require("babel/register")({
+      "optional": ["es7.classProperties"]
+    })
     require("./app.jsx")
   </script>
 </body>

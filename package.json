@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "babel": "^5.8.3",
+    "gray-matter": "^2.0.1",
     "react": "^0.13.3",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "toml": "^2.3.0"
   }
 }

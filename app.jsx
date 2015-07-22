@@ -1,5 +1,8 @@
 import React from 'react'
 import Router from 'react-router'
+import path from 'path'
+import fs from 'fs'
+import toml from 'toml'
 import NavigationBar from './components/navigation_bar'
 import ContentsPage from './components/contents'
 import SettingsPage from './components/settings'
@@ -11,9 +14,11 @@ import {RouteHandler} from 'react-router'
 
 class App extends React.Component {
   render() {
+    var data = fs.readFileSync( 'config.toml', 'utf8' );
+    var config = toml.parse(data);
     return (
       <div>
-        <NavigationBar />
+        <NavigationBar title={config.title} description={config.baseurl} />
         <RouteHandler />
       </div>
     )
