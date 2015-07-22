@@ -1,8 +1,8 @@
 import { Action } from 'material-flux'
-import { cwd } from 'child_process'
 import fs from 'fs'
 import toml from 'toml'
 import path from 'path'
+import gm from 'gray-matter'
 
 export default class AppAction extends Action {
   loadConfig() {
@@ -12,10 +12,16 @@ export default class AppAction extends Action {
   }
 
   loadFiles() {
-    var files = fs.readdirSync( path.join(cwd(), 'content', 'post') ).map( function(file) {
-      if (path.extname(file) != ".md") return null;
-      return file;
-    });
+    var basedir = path.join(process.cwd(), 'content', 'post');
+    var files = fs.readdirSync( basedir )
+      .filter( function(file) {
+        return path.extname(file) == ".md"
+      })
+      .map(function(file){
+        let matter = gm.read(path.join(basedir, file), {delims: '+++', lang: 'toml'}).data;
+        matter['path'] = path.join(basedir, file);
+        return matter;
+      });
     this.dispatch('loadFiles', files);
   }
 }

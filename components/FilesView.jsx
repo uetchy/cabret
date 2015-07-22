@@ -9,10 +9,24 @@ export default class FilesView extends React.Component {
   constructor(...args) {
     super(...args);
     this.fileStore = this.props.context.fileStore;
+    this.props.context.appAction.loadFiles();
     this.state = {
       files: this.fileStore.getFiles()
     };
-    this.appAction.loadFiles();
+  }
+
+  _onChange() {
+    this.setState({
+      files: this.fileStore.getFiles()
+    });
+  }
+
+  componentDidMount() {
+    this.fileStore.onChange(this._onChange.bind(this));
+  }
+
+  componentWillUnmount() {
+    this.fileStore.removeAllChangeListeners();
   }
 
   render() {
@@ -21,7 +35,7 @@ export default class FilesView extends React.Component {
         title={file.title}
         description={file.date}
         draft={file.draft}
-        path={file.path} />
+        filepath={file.path} />
     });
     return (
       <div>

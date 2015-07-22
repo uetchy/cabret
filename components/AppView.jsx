@@ -1,8 +1,7 @@
 import React from 'react'
-import {RouteHandler} from 'react-router'
-import path from 'path'
 
 import NavigationBar from './NavigationBar'
+import Files from './FilesView'
 
 export default class AppView extends React.Component {
   constructor(...args) {
@@ -28,10 +27,11 @@ export default class AppView extends React.Component {
   }
 
   render() {
+    let { context } = this.props;
     return (
       <div>
         <NavigationBar title={this.state.config.title} description={this.state.config.baseurl} />
-        <RouteHandler />
+        <Files context={context} />
       </div>
     )
   }

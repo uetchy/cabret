@@ -3,8 +3,7 @@ import {exec} from 'child_process'
 
 export default class ArticleCell extends React.Component {
   onClick = () => {
-    // e is SyntheticEvent
-    exec("/usr/bin/open /Applications/MacDown.app " + this.props.path)
+    exec("/usr/bin/open /Applications/MacDown.app " + this.props.filepath)
   }
 
   render() {
