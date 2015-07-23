@@ -1,7 +1,4 @@
 import React from 'react'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 
 import ArticleCell from './ArticleCell'
 
@@ -29,9 +26,11 @@ export default class Files extends React.Component {
   }
 
   render() {
+    let { context } = this.props;
     var files = this.state.files.map(function(file, i){
       return <ArticleCell
         key={'article-'+i}
+        context={context}
         title={file.title}
         description={file.date}
         draft={file.draft}

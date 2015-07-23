@@ -3,6 +3,7 @@ import fs from 'fs'
 import toml from 'toml'
 import path from 'path'
 import gm from 'gray-matter'
+import { exec } from 'child_process'
 
 export default class AppAction extends Action {
   loadConfig() {
@@ -23,5 +24,9 @@ export default class AppAction extends Action {
         return matter;
       });
     this.dispatch('loadFiles', files);
+  }
+
+  openEditor(file) {
+    exec("/usr/bin/open /Applications/MacDown.app " + file);
   }
 }

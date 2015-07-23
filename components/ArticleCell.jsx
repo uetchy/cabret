@@ -1,9 +1,13 @@
 import React from 'react'
-import {exec} from 'child_process'
 
 export default class ArticleCell extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.appAction = this.props.context.appAction;
+  }
+
   onClick = () => {
-    exec("/usr/bin/open /Applications/MacDown.app " + this.props.filepath)
+    this.appAction.openEditor(this.props.filepath);
   }
 
   render() {
