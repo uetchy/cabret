@@ -1,10 +1,12 @@
 import React from 'react'
 
 import Context from './AppContext';
-import AppView from './components/AppView'
+import App from './components/App'
 
 let context = new Context();
 
+context.appAction.loadConfig();
+context.appAction.loadFiles();
 React.render(
-  React.createElement(AppView, {context}), document.querySelector("app")
+  React.createElement(App, {context}), document.querySelector("app")
 )

@@ -9,8 +9,5 @@ export default class AppContext extends Context {
     this.appAction = new AppAction(this);
     this.appStore = new AppStore(this);
     this.fileStore = new FileStore(this);
-
-    // Initially load config.toml
-    this.appAction.loadConfig();
   }
 }
