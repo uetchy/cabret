@@ -5,11 +5,10 @@ import matter from 'gray-matter'
 
 import ArticleCell from './ArticleCell'
 
-export default class FilesView extends React.Component {
+export default class Files extends React.Component {
   constructor(...args) {
     super(...args);
     this.fileStore = this.props.context.fileStore;
-    this.props.context.appAction.loadFiles();
     this.state = {
       files: this.fileStore.getFiles()
     };
@@ -30,8 +29,9 @@ export default class FilesView extends React.Component {
   }
 
   render() {
-    var files = this.state.files.map(function(file){
+    var files = this.state.files.map(function(file, i){
       return <ArticleCell
+        key={'article-'+i}
         title={file.title}
         description={file.date}
         draft={file.draft}
