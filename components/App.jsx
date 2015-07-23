@@ -1,7 +1,7 @@
 import React from 'react'
 
 import NavigationBar from './NavigationBar'
-import Files from './Files'
+import Articles from './Articles'
 
 var App = React.createClass({
   getInitialState() {
@@ -30,7 +30,7 @@ var App = React.createClass({
     return (
       <div>
         <NavigationBar title={this.state.config.title} description={this.state.config.baseurl} />
-        <Files context={context} />
+        <Articles context={context} />
       </div>
     )
   }

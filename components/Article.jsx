@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class ArticleCell extends React.Component {
+export default class Article extends React.Component {
   constructor(...args) {
     super(...args);
     this.appAction = this.props.context.appAction;
