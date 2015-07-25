@@ -9,6 +9,7 @@ body {
 }
 
 .navigation-bar {
+  height: 30px;
   background: #3F3535;
   text-align: center;
   padding: 15px;
@@ -17,11 +18,14 @@ body {
 }
 
 .navigation-bar--title {
+  font-size: 14pt;
   font-weight: 100;
   color: #fff;
 }
 
 .navigation-bar--description {
+  font-size: 10pt;
+  font-weight: 100;
   color: #898787;
 }
 
@@ -32,6 +36,14 @@ body {
   background: #fff;
 }
 
+.article-cell--title {
+  font-weight: 500;
+  font-size: 13pt;
+}
+
 .article-cell--description {
+  margin-top: 5px;
+  font-family: 'Helvetica Neue';
+  font-size: 10pt;
   color: #B0B0B0;
 }

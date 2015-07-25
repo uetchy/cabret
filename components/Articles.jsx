@@ -5,10 +5,11 @@ import Article from './Article'
 export default class Articles extends React.Component {
   constructor(...args) {
     super(...args);
+    this.appStore = this.props.context.appStore;
     this.fileStore = this.props.context.fileStore;
     this.state = {
       files: this.fileStore.getFiles(),
-      sortState: "date"
+      sortState: this.appStore.getSortState()
     };
 
     this.sortAlgorithms = {
@@ -27,7 +28,8 @@ export default class Articles extends React.Component {
 
   _onChange = () => {
     this.setState({
-      files: this.fileStore.getFiles()
+      files: this.fileStore.getFiles(),
+      sortState: this.appStore.getSortState()
     });
   }
 
@@ -48,22 +50,19 @@ export default class Articles extends React.Component {
     let sortState = this.state.sortState;
     let files = this.state.files
       .sort(this.sortAlgorithms[this.state.sortState])
-      .map(function(file, i){
-        return <Article
-          key={'article-'+i}
-          context={context}
-          title={file.title}
-          description={file.date}
-          draft={file.draft}
-          filepath={file.path} />
-      });
     return (
       <div className="articles">
-        <select value={sortState} onChange={this.handleChangeSort}>
-          <option value="date">Date</option>
-          <option value="name">Name</option>
-        </select>
-        {files}
+        {files.map(function(file, index) {
+          return (
+            <Article
+              key={'article-'+i}
+              context={context}
+              title={file.title}
+              description={file.date}
+              draft={file.draft}
+              filepath={file.path} />
+          )
+        })}
       </div>
     )
   }

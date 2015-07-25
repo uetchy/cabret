@@ -1,6 +1,7 @@
 import React from 'react'
 
 import NavigationBar from './NavigationBar'
+import StatusBar from './StatusBar'
 import Articles from './Articles'
 
 var App = React.createClass({
@@ -31,6 +32,7 @@ var App = React.createClass({
       <div>
         <NavigationBar title={this.state.config.title} description={this.state.config.baseurl} />
         <Articles context={context} />
+        <StatusBar context={context} />
       </div>
     )
   }
