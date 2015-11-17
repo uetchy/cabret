@@ -1,6 +1,6 @@
 {
   "name": "cabret",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Cabret for Hugo",
   "main": "main.js",
   "scripts": {
@@ -10,13 +10,14 @@
   "author": "Yasuaki Uechi <uetchy@randompaper.co>",
   "license": "MIT",
   "devDependencies": {
-    "electron-prebuilt": "^0.30.0"
+    "electron-prebuilt": "^0.35.0"
   },
   "dependencies": {
-    "babel": "^5.8.3",
+    "babel": "^6.1.18",
     "gray-matter": "^2.0.1",
-    "material-flux": "^1.2.2",
-    "react": "^0.13.3",
+    "react": "^0.14.2",
+    "react-router": "^1.0.0-rc1",
+    "redux": "^3.0.4",
     "toml": "^2.3.0"
   }
 }
