@@ -4,19 +4,27 @@
   "description": "Cabret for Hugo",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron ./dist"
   },
   "keywords": [],
   "author": "Yasuaki Uechi <uetchy@randompaper.co>",
   "license": "MIT",
   "devDependencies": {
-    "electron-prebuilt": "^0.35.0"
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^6.1.18",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "css-loader": "^0.23.0",
+    "electron-packager": "^5.1.1",
+    "electron-prebuilt": "^0.35.0",
+    "style-loader": "^0.13.0"
   },
   "dependencies": {
-    "babel": "^6.1.18",
     "gray-matter": "^2.0.1",
+    "material-flux": "^1.3.1",
     "react": "^0.14.2",
-    "react-router": "^1.0.0-rc1",
+    "react-dom": "^0.14.3",
     "redux": "^3.0.4",
     "toml": "^2.3.0"
   }
