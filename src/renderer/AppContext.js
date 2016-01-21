@@ -1,4 +1,3 @@
-import { Context } from 'material-flux'
 import AppAction from './actions/AppAction'
 import AppStore from './stores/AppStore'
 import FileStore from './stores/FileStore'

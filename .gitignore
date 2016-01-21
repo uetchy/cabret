@@ -3,3 +3,4 @@ node_modules
 /content
 /config.toml
 dist
+*.log
