@@ -13,7 +13,11 @@ app.on('window-all-closed', () => {
 
 app.on('ready', () => {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 600, height: 800, frame: false});
+  mainWindow = new BrowserWindow({
+    width: 600,
+    height: 800,
+    frame: false
+  });
 
   // and load the index.html of the app.
   mainWindow.loadUrl('file://' + __dirname + '/index.html');

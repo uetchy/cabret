@@ -20,16 +20,13 @@ module.exports = {
     root: path.resolve('./src')
   },
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css!autoprefixer-loader?{browsers:["last 3 versions", "Firefox ESR"]}'
-      }
-    ]
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: 'babel'
+    }, {
+      test: /\.css$/,
+      loader: 'style!css!autoprefixer-loader?{browsers:["last 3 versions", "Firefox ESR"]}'
+    }]
   }
 };

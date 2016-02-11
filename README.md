@@ -1,5 +1,4 @@
 # Cabret
-
 Hugo content manager using React + Electron.
 
 ![Cabret](http://randompaper.co.s3.amazonaws.com/cabret-ss.png)
