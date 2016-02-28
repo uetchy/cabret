@@ -1,13 +1,13 @@
-import { Action } from 'material-flux'
+import {Action} from 'material-flux'
 import fs from 'fs'
 import toml from 'toml'
 import path from 'path'
 import gm from 'gray-matter'
-import { exec } from 'child_process'
+import {exec} from 'child_process'
 
 export default class AppAction extends Action {
   loadConfig() {
-    let data = fs.readFileSync( 'config.toml', 'utf8' );
+    let data = fs.readFileSync('config.toml', 'utf8');
     let config = toml.parse(data);
     this.dispatch('loadConfig', config);
   }

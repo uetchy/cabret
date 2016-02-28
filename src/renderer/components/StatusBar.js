@@ -9,13 +9,13 @@ export default class StatusBar extends React.Component {
     };
   }
 
-  _onChange = () => {
+  _onChange(){
     this.setState({
       files: this.fileStore.getFiles()
     });
   }
 
-  handleChangeSort = (event) => {
+  handleChangeSort(event){
     this.setState({sortState: event.target.value});
   }
 

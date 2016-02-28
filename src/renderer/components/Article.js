@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default class Article extends React.Component {
   constructor(...args) {
@@ -6,7 +6,7 @@ export default class Article extends React.Component {
     this.appAction = this.props.context.appAction;
   }
 
-  onClick = () => {
+  onClick() {
     this.appAction.openEditor(this.props.filepath);
   }
 

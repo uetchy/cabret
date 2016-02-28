@@ -2,36 +2,32 @@
   "name": "cabret",
   "version": "0.1.0",
   "description": "Cabret for Hugo",
-  "main": "main/main.js",
+  "main": "app/main.js",
   "scripts": {
     "start": "electron .",
     "build": "webpack",
+    "watch": "webpack -w",
     "archive": "electron-packager"
   },
   "keywords": [],
   "author": "Yasuaki Uechi <uetchy@randompaper.co>",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
-    "babel-loader": "^6.2.2",
+    "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
-    "css-loader": "^0.23.1",
-    "electron-builder": "^2.7.2",
-    "electron-osx-sign": "^0.1.5",
+    "electron-builder": "^2.8.3",
+    "electron-osx-sign": "^0.2.0",
     "electron-packager": "^5.2.1",
-    "electron-prebuilt": "^0.36.7",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.13"
+    "electron-prebuilt": "^0.36.9",
+    "webpack": "^1.12.14"
   },
   "dependencies": {
     "gray-matter": "^2.0.2",
-    "material-flux": "^1.4.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "redux": "^3.3.1",
-    "titlebar": "^1.4.0",
-    "toml": "^2.3.0"
+    "titlebar": "^1.4.0"
   }
 }

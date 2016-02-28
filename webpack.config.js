@@ -6,12 +6,12 @@ module.exports = {
   target: 'atom',
   devtool: 'source-map',
   entry: [
-    './src/main/main.js',
+    './src/main/index.js',
     './src/renderer/index.js'
   ],
   output: {
     filename: '[name].js',
-    path: path.resolve('./dist'),
+    path: path.resolve('./app'),
     publicPath: '/'
   },
   resolve: {
@@ -24,9 +24,6 @@ module.exports = {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel'
-    }, {
-      test: /\.css$/,
-      loader: 'style!css!autoprefixer-loader?{browsers:["last 3 versions", "Firefox ESR"]}'
     }]
   }
 };

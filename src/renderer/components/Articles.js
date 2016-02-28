@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Article from './Article'
 
 export default class Articles extends React.Component {
@@ -26,14 +25,14 @@ export default class Articles extends React.Component {
     }
   }
 
-  _onChange = () => {
+  _onChange() {
     this.setState({
       files: this.fileStore.getFiles(),
       sortState: this.appStore.getSortState()
     });
   }
 
-  handleChangeSort = (event) => {
+  handleChangeSort(event) {
     this.setState({sortState: event.target.value});
   }
 
@@ -49,7 +48,7 @@ export default class Articles extends React.Component {
     let { context } = this.props;
     let sortState = this.state.sortState;
     let files = this.state.files
-      .sort(this.sortAlgorithms[this.state.sortState])
+      .sort(this.sortAlgorithms[this.state.sortState]);
     return (
       <div className="articles">
         {files.map(function(file, index) {
@@ -64,6 +63,6 @@ export default class Articles extends React.Component {
           )
         })}
       </div>
-    )
+    );
   }
 }
